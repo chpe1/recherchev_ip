@@ -1,5 +1,3 @@
-Sure, here's a README file for your IP Address Comparison Script in both English and French:
-
 **English README:**
 
 # IP Address Comparison Script
@@ -11,6 +9,7 @@ This Python script is designed to compare IP addresses in multiple CSV and TXT f
 To use this script, provide the paths of one or more CSV or TXT files containing IP addresses as command-line arguments. The script will find and display the common IP addresses among the provided files.
 
 Example:
+
 ```bash
 $ python script.py file1.csv file2.txt
 ```
@@ -38,6 +37,7 @@ Ce script Python a été conçu pour comparer les adresses IP dans plusieurs fic
 Pour utiliser ce script, fournissez les chemins de un ou plusieurs fichiers CSV ou TXT contenant des adresses IP en tant qu'arguments en ligne de commande. Le script trouvera et affichera les adresses IP communes parmi les fichiers fournis.
 
 Exemple :
+
 ```bash
 $ python script.py file1.csv file2.txt
 ```
