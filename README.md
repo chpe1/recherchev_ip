@@ -1,5 +1,3 @@
-**English README:**
-
 # IP Address Comparison Script
 
 This Python script is designed to compare IP addresses in multiple CSV and TXT files and identify common IP addresses across them. It extracts IP addresses from these files and performs the comparison to find shared IP addresses.
@@ -28,7 +26,7 @@ $ python script.py file1.csv file2.txt
 - Author: chpe1
 - Date: 30/10/2023
 
-**French README:**
+<hr/>
 
 # Script de Comparaison d'Adresses IP
 
