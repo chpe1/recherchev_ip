@@ -116,11 +116,51 @@ def compare_all_files(*file_paths):
     return common_ips
 
 
+def compare_common_ips_across_files(*file_paths):
+    """
+    Compares IP addresses from multiple files and returns IP addresses common to at least two files.
+
+    Parameters:
+        *file_paths (str): Variable number of file paths containing IP addresses.
+
+    Returns:
+        dict: A dictionary where keys are common IP addresses and values are sets of files where they are present.
+    """
+    common_ips = {}
+    ip_sets = []
+
+    for file_path in file_paths:
+        ip_addresses = load_ip_addresses_from_file(file_path)
+        ip_sets.append((file_path, ip_addresses))
+
+    for file_1, ips_1 in ip_sets:
+        for ip in ips_1:
+            # Check if the IP address is common to at least one more file
+            for file_2, ips_2 in ip_sets:
+                if file_1 != file_2 and ip in ips_2:
+                    if ip not in common_ips:
+                        common_ips[ip] = {file_1, file_2}
+                    else:
+                        common_ips[ip].add(file_2)
+
+    return common_ips
+
+
 if __name__ == "__main__":
+    # STEP 1 : compare if ip is in all files
     common_ips = compare_all_files(*args.files)
     if common_ips:
-        print("Common IP Addresses:")
+        print("Common IP Addresses in all files:")
         for ip in common_ips:
             print(ip)
+    else:
+        print("No common IP addresses found in all files")
+
+    # STEP 2 : Compare if ip is in at least 2 files
+    common_ips_2 = compare_common_ips_across_files(*args.files)
+    if common_ips_2:
+        print("IP Addresses common to at least two files:")
+        for ip, files in common_ips_2.items():
+            print(f"IP: {ip}, Present in Files: {', '.join(files)}")
     else:
         print("No common IP addresses found.")
