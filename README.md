@@ -21,11 +21,6 @@ $ python script.py file1.csv file2.txt
 - `compare_all_files(*file_paths)`: Compares IP addresses of multiple files and returns IP addresses common to all files as a set
 - `compare_common_ips_across_files(*file_paths)` : Compares the IP addresses of several files and returns common IP addresses as a set, indicating in which files they were found
 
-## Author
-
-- Author: chpe1
-- Date: 30/10/2023
-
 <hr/>
 
 # Script de Comparaison d'Adresses IP
@@ -50,8 +45,3 @@ $ python script.py file1.csv file2.txt
 - `load_ip_addresses_from_file(file_path)`: Charge les adresses IP depuis un fichier CSV ou TXT et les renvoie sous forme d'ensemble.
 - `compare_all_files(*file_paths)`: Compare les adresses IP de plusieurs fichiers et renvoie les adresses IP communes à tous les fichiers sous forme d'ensemble.
 - `compare_common_ips_across_files(*file_paths)`: Compare les adresses IP de plusieurs fichiers et renvoie les adresses IP communes sous forme d'ensemble en indiquant dans quels fichiers elles ont été trouvées.
-
-## Auteur
-
-- Auteur : chpe1
-- Date : 30/10/2023
