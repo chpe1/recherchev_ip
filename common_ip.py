@@ -15,9 +15,12 @@ Functions:
     - load_ip_addresses_from_file(file_path): Loads IP addresses from a CSV or TXT file and returns them as a set.
     - compare_all_files(*file_paths): Compares IP addresses from multiple files and returns common IP addresses as a set.
 
+Tests:
+    python -m unittest tests.py
+
 This script uses the argparse module to handle command-line arguments and provides meaningful output to identify common IP addresses.
 
-Author: JN
+Author: chpe1
 Date: 30/10/2023
 """
 
@@ -25,7 +28,8 @@ import csv
 from collections import Counter
 import argparse
 
-parser = argparse.ArgumentParser(description="Compare IP addresses in multiple CSV and TXT files and find common IP addresses.")
+parser = argparse.ArgumentParser(
+    description="Compare IP addresses in multiple CSV and TXT files and find common IP addresses.")
 parser.add_argument("files", nargs='+',
                     help="List of CSV or TXT files containing IP addresses")
 args = parser.parse_args()
